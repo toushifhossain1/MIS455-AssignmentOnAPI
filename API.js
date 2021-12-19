@@ -93,9 +93,9 @@ function searchResults() {
 function SearchCard(data, search) {
     //console.log(data);
 
-    var element = document.getElementById("BootStrapData");
+    var element = document.getElementById("BootStrapData"); // This one gets deleted
 
-    var content = document.getElementById("BootStrapData");
+    var content = document.getElementById("SearchBootStrapData"); // Eita bairer ta jeita delete hoy na
     element.parentNode.removeChild(element);
 
     var newDiv = document.createElement("div");
@@ -118,8 +118,12 @@ function SearchCard(data, search) {
        </div> `;
             // console.log(newDiv);
             //console.log(content);
-            content.createChild(newDiv);
+            content.appendChild(newDiv);
+
         }
+
+
+
     }
 }
 
