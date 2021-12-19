@@ -35,7 +35,10 @@ function card(data) {
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div> `;
+
         content.appendChild(newDiv);
+
+
     }
 
 
@@ -77,11 +80,46 @@ function card(data) {
 
 
 function searchResults() {
-
-    var search;
-    search = document.getElementById("searchbox").value;
+    var search = document.getElementById("searchbox").value;
 
 
 
 
+    fetch(url)
+        .then(res => res.json())
+        .then(data => SearchCard(data.categories, search))
 }
+
+function SearchCard(data, search) {
+    //console.log(data);
+
+    var element = document.getElementById("BootStrapData");
+
+    var content = document.getElementById("BootStrapData");
+    element.parentNode.removeChild(element);
+
+    var newDiv = document.createElement("div");
+    for (var i = 0; i < data.length; i++) {
+
+        var category = (data[i].strCategory);
+        var details = (data[i].strCategoryDescription);
+        var image = (data[i].strCategoryThumb);
+
+        if (search == category) {
+
+            //console.log(category);
+            newDiv.innerHTML = `<div class="card" style="width: 1000px;">
+            <img src=" ${image}" class="card-img-top" alt=""  >
+            <div class="card-body ">
+               <h5 class="card-title" id="catagory" >  ${category} <br> </h5>
+                <p class="card-text" id="description"> ${details} <br> 
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+           </div>
+       </div> `;
+            // console.log(newDiv);
+            //console.log(content);
+            content.createChild(newDiv);
+        }
+    }
+}
+
