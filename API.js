@@ -16,9 +16,11 @@ function card(data) {
         console.log(data[i].strCategory);
         var category = (data[i].strCategory);
         var details = (data[i].strCategoryDescription);
+        var image = (data[i].strCategoryThumb);
         var newDiv = document.createElement("div");
+
         newDiv.innerHTML = `<div class="card" style="width: 18rem;">
-            <img src="" class="card-img-top" alt="">
+            <img src=" ${image}" class="card-img-top" alt="">
             <div class="card-body">
                 <h5 class="card-title" id="catagory"> <p> ${category} <br></p> </h5>
                 <p class="card-text" id="description"><p> ${details} <br></p> </p>
