@@ -1,0 +1,25 @@
+
+.topnav{
+    background-color: rgb(255, 235, 205);
+    
+    
+}
+.card{
+    
+    margin-top: 50px;
+    margin: auto;
+    
+  width: 50%;
+    
+}
+.button{
+    background-color: rgb(0, 0, 71);
+    color: rgb(255, 235, 205);
+    border-radius: 20px;
+     
+}
+.searchbox{
+    display: flex;
+     margin-left: 40%;
+    margin-right: 40%;
+}
