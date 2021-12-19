@@ -1,0 +1,10 @@
+//console.log(arr_catagory[i].strCategoryThumb);
+
+        var content = document.getElementById("card"); // List list1; -> c++
+
+        var newCard = document.createElement("card"); // list.node = new node; -> c++
+        //newDiv.classList.add("styles");
+        var catagory = arr_catagory[i].strCategoryDescription;
+
+        newCard.innerHTML = `<p> ${catagory} <br></p>  `; // list1.data = *something*
+        content.appendChild(newCard); // list1.next (new node);
