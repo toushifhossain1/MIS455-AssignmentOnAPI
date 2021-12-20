@@ -13,7 +13,7 @@ function card(data) {
     //console.log(data);
     var content = document.getElementById("BootStrapData");
     var newDiv = document.getElementById("div");
-    for (var i = 0; i < data.length; i++) {
+    for (var i = 0; i < 12; i++) {
         //console.log(i);
 
         //console.log(data[i].strCategory);
@@ -30,7 +30,7 @@ function card(data) {
         newDiv.innerHTML = `<div class="card" style="width: 1000px;">
             <img src=" ${image}" class="card-img-top" alt=""  >
             <div class="card-body ">
-                <h5 class="card-title" id="catagory" >  ${category} <br> </h5>
+                <h1 class="card-title" id="catagory" >  ${category} <br> </h1>
                 <p class="card-text" id="description"> ${details} <br> 
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
@@ -99,7 +99,7 @@ function SearchCard(data, search) {
     element.parentNode.removeChild(element);
 
     var newDiv = document.createElement("div");
-    for (var i = 0; i < data.length; i++) {
+    for (var i = 0; i < 12; i++) {
 
         var category = (data[i].strCategory);
         var details = (data[i].strCategoryDescription);
@@ -111,7 +111,7 @@ function SearchCard(data, search) {
             newDiv.innerHTML = `<div class="card" style="width: 1000px;">
             <img src=" ${image}" class="card-img-top" alt=""  >
             <div class="card-body ">
-               <h5 class="card-title" id="catagory" >  ${category} <br> </h5>
+               <h3 class="card-title" id="catagory" >  ${category} <br> </h3>
                 <p class="card-text" id="description"> ${details} <br> 
                <a href="#" class="btn btn-primary">Go somewhere</a>
            </div>

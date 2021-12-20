@@ -1,6 +1,8 @@
 
+
 .topnav{
-    background-color: rgb(255, 235, 205);
+    
+    height: 60px;
     
     
 }
@@ -8,18 +10,39 @@
     
     margin-top: 50px;
     margin: auto;
-    
+    color: #301551;
+    background-color: #ffb759;
+    border-radius: 50px;
+    margin-top: 50px;
+    font-size: 40px;
+
+
   width: 50%;
     
 }
 .button{
+    height: 60px;
+    width: 200px;
     background-color: rgb(0, 0, 71);
     color: rgb(255, 235, 205);
     border-radius: 20px;
+    margin-left: 50px;
      
 }
+.searchbar{
+    border-radius: 20px;
+    height: 60px;
+    width: 400px;
+    
+    
+}
 .searchbox{
+    height: 60px;
+     margin: 0;
+     position: absolute;
+     left: 50%;
+    transform: translate(-50%);
     display: flex;
-     margin-left: 40%;
-    margin-right: 40%;
+    
+    
 }
